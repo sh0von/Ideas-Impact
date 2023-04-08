@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Organic Vegetable Delivery Service</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/flatly/bulmaswatch.min.css">
+</head>
+
+<body>
+
+  
+      
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Organic Vegetable Delivery Service
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="field">
+                        <label class="label">Search</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Search...">
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="field">
+                        <label class="label">Select</label>
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select>
+                                    <option>Select option</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-multiline">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title is-4">Organic Vegetables</p>
+                                <p class="subtitle is-6">Locally Grown</p>
+                                <p>A weekly delivery service that provides fresh, locally grown organic vegetables to
+                                    customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title is-4">Organic Fruits</p>
+                                <p class="subtitle is-6">Freshly Picked</p>
+                                <p>A weekly delivery service that provides fresh, locally grown organic fruits to
+                                    customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title is-4">Organic Herbs</p>
+                                <p class="subtitle is-6">Flavorful and Fragrant</p>
+                                <p>A weekly delivery service that provides fresh, locally grown organic herbs to
+                                    customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="columns">
+                <div class="column is-full">
+                    <nav class="pagination is-centered " role="navigation" aria-label="pagination">
+                        <ul class="pagination-list">
+                            <li><a class=" pagination-link" href="#" aria-label="Goto page 1">1</a></li>
+                            <li><span class="pagination-ellipsis">&hellip;</span></li>
+                            <li><a class="pagination-link" href="#" aria-label="Goto page 45">45</a></li>
+                            <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+                            </li>
+                            <li><a class="pagination-link" href="#" aria-label="Goto page 47">47</a></li>
+                            <li><span class="pagination-ellipsis">&hellip;</span></li>
+                            <li><a class="pagination-link" href="#" aria-label="Goto page 86">86</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-half">
+                    <h3 class="title is-3">Subscribe to Our Newsletter</h3>
+                    <form action="#">
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <input class="input" type="email" placeholder="Enter your email">
+                            </div>
+                            <div class="control">
+                                <button class="button is-primary" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+ <!-- Modal -->
+    <!-- <div class="modal" id="subscribe-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <h1 class="title">Subscribe to our newsletter</h1>
+            <p>Get the latest news and updates straight to your inbox.</p>
+            <form id="subscribe-form">
+              <div class="field has-addons">
+                <div class="control is-expanded">
+                  <input class="input" type="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="control">
+                  <button class="button is-primary" type="submit">Subscribe</button>
+                </div>
+              </div>
+            </form>
+            <div id="subscribe-success" class="notification is-success #is-hidden">
+              Thank you for subscribing!
+              <button class="delete"></button>
+            </div>
+          </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  var modal = document.getElementById('subscribe-modal');
+  var emailInput = modal.querySelector('input[type="email"]');
+  var form = modal.querySelector('form');
+  var successMessage = modal.querySelector('#subscribe-success');
+  var closeButton = successMessage.querySelector('.delete');
+  
+  function subscribe() {
+    // Here you can send the email address to your server or email marketing platform
+    // and handle the response to show the success message or an error message
+    // In this example, we just show the success message
+    successMessage.classList.remove('is-hidden');
+  }
+  
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    subscribe();
+  });
+  
+  closeButton.addEventListener('click', function() {
+    successMessage.classList.add('is-hidden');
+  });
+  
+  setTimeout(function() {
+    modal.classList.add('is-active');
+    emailInput.focus();
+  }, 2000);
+});
+
+</script>      
+<style>
+    #subscribe-modal .box {
+  max-width: 400px;
+  margin: auto;
+}
+
+#subscribe-modal #subscribe-success {
+  margin-top: 10px;
+}
+
+#subscribe-modal .delete {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+</style>
+</body>
+
+</html>
